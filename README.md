@@ -36,7 +36,7 @@ The documentation states there are two ways to enable explicit acknowledgment in
 
 #### How to reproduce:
 
-Acknowledge mode: `implicit`
+Acknowledge mode: `explicit`
 
 1. Start the application
 
