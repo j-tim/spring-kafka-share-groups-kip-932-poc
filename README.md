@@ -30,9 +30,7 @@ docker compose down
 The documentation states there are two ways to enable explicit acknowledgment in shared groups in Spring Kafka:
 
 * [Option 1](https://docs.spring.io/spring-kafka/reference/4.1/kafka/kafka-queues.html#_option_1_using_kafka_client_configuration) is working `props.put(ConsumerConfig.SHARE_ACKNOWLEDGEMENT_MODE_CONFIG, "explicit");`.
-* [Option 2](https://docs.spring.io/spring-kafka/reference/4.1/kafka/kafka-queues.html#_option_2_using_spring_container_configuration): is not working
-
-`factory.getContainerProperties().setExplicitShareAcknowledgment(true);`
+* [Option 2](https://docs.spring.io/spring-kafka/reference/4.1/kafka/kafka-queues.html#_option_2_using_spring_container_configuration): is not working `factory.getContainerProperties().setExplicitShareAcknowledgment(true);`
 
 #### How to reproduce:
 
