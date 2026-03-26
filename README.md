@@ -34,6 +34,13 @@ The documentation states there are two ways to enable explicit acknowledgment in
 
 `factory.getContainerProperties().setExplicitShareAcknowledgment(true);`
 
+_Observation: If explicit mode is configured for ShareConsumerFactory via `properties.put(ConsumerConfig.SHARE_ACKNOWLEDGEMENT_MODE_CONFIG, "explicit")`
+but the container is NOT configured with explicit acknowledgment via Option 2 (containerProperties.setExplicitShareAcknowledgment(true)), 
+this will also trigger a NullPointerException:_
+
+```log 
+java.lang.NullPointerException: Cannot invoke "org.springframework.kafka.support.ShareAcknowledgment.acknowledge()" because "acknowledgment" is null
+```
 #### How to reproduce:
 
 Acknowledge mode: `implicit`
