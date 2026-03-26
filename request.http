@@ -1,0 +1,7 @@
+### Happy path
+
+POST http://localhost:8080/produce?message=Hi
+
+### Error scenario. To trigger the ....
+POST http://localhost:8080/produce?
+    message=kaboom
