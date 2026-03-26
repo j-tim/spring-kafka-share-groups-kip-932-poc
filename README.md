@@ -76,7 +76,7 @@ java.lang.IllegalStateException: Implicit acknowledgement of delivery is being u
 
 When applying option 2, the `ShareConsumerConfig` should show we are using `explicit` acknowledgment mode and we should be able to acknowledge messages in our Spring Kafka consumer.
 
-### Issue 2: 
+### Issue 2: ShareGroup consumers in Spring Kafka are not correctly rejected on error in `implicit` acknowledgment mode
 
 Acknowledge mode: `implicit`
 
