@@ -25,7 +25,7 @@ docker compose down
 
 ## Issues
 
-### Issue 1: Setting explicit acknowledgment via ShareKafkaListenerContainerFactory container properties does not enable `explicit` acknowledgment mode for Share Groups
+### Issue 1 ([#4369](https://github.com/spring-projects/spring-kafka/issues/4369)): Setting explicit acknowledgment via ShareKafkaListenerContainerFactory container properties does not enable `explicit` acknowledgment mode for Share Groups
 
 The documentation states there are two ways to enable explicit acknowledgment in shared groups in Spring Kafka:
 
