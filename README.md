@@ -25,7 +25,7 @@ docker compose down
 
 ## Issues
 
-### Issue 1: Explicit knowledge options 2 in not working
+### Issue 1: Setting explicit acknowledgment via ShareKafkaListenerContainerFactory container properties does not enable `explicit` acknowledgment mode for Share Groups
 
 The documentation states there are two ways to enable explicit acknowledgment in shared groups in Spring Kafka:
 
@@ -34,13 +34,6 @@ The documentation states there are two ways to enable explicit acknowledgment in
 
 `factory.getContainerProperties().setExplicitShareAcknowledgment(true);`
 
-_Observation: If explicit mode is configured for ShareConsumerFactory via `properties.put(ConsumerConfig.SHARE_ACKNOWLEDGEMENT_MODE_CONFIG, "explicit")`
-but the container is NOT configured with explicit acknowledgment via Option 2 (containerProperties.setExplicitShareAcknowledgment(true)), 
-this will also trigger a NullPointerException:_
-
-```log 
-java.lang.NullPointerException: Cannot invoke "org.springframework.kafka.support.ShareAcknowledgment.acknowledge()" because "acknowledgment" is null
-```
 #### How to reproduce:
 
 Acknowledge mode: `implicit`
@@ -81,7 +74,7 @@ java.lang.IllegalStateException: Implicit acknowledgement of delivery is being u
 
 #### Expected behavior: 
 
-When applying option 2, the `ShareConsumerConfig` should show we are using `explicit` acknowledgment mode and we should be able to acknowledge messages in our Spring Kafka consumer.
+When applying option 2, the `ShareConsumerConfig` should show we are using `explicit` acknowledgment mode, and we should be able to acknowledge messages in our Spring Kafka consumer.
 
 ### Issue 2: ShareGroup consumers in Spring Kafka are not correctly rejected on error in `implicit` acknowledgment mode
 
@@ -235,3 +228,10 @@ Relevant part: `"deliveryState": 2`
 * deliveryState 0 = `Available`
 * deliveryState 2 = `Acked`
 * deliveryState 4 = `Archived`
+
+## Limitations
+
+* Autoconfiguration
+* Observability (Metrics + Tracing)
+* Exponential back-off
+* DLT?
