@@ -1,6 +1,16 @@
 # Spring Boot / Spring Kafka Share Groups (KIP-932) POC
 Simple Spring Boot / Spring Kafka Share Groups example for KIP-932 (Queues for Kafka)
 
+## Fixes
+
+The fix for the issues have been provided in:
+
+* Pull request: [4374](https://github.com/spring-projects/spring-kafka/pull/4374)
+* See commit: https://github.com/spring-projects/spring-kafka/commit/813b9af333a6b812617e970f34ca0ae447dda7fb
+
+To see the fix in action using Spring Boot 4.1.0-SNAPSHOT & Spring Kafka 4.1.0-SNAPSHOT: check out branch: [fix](https://github.com/j-tim/spring-kafka-share-groups-kip-932-poc/tree/fix)
+See documentation [What’s New in 4.1 Since 4.0 - Share Consumer Acknowledgment Modes](https://docs.spring.io/spring-kafka/reference/4.1-SNAPSHOT/whats-new.html#x41-share-ack-mode)
+
 ## Versions 
 
 * Java: 25
@@ -233,12 +243,5 @@ Relevant part: `"deliveryState": 2`
 * Exponential back-off
 * No DLT support
 
-## Fixes 
 
-The fix for the above issues have been provided in: 
-
-* Pull request: [4374](https://github.com/spring-projects/spring-kafka/pull/4374)
-* See commit: https://github.com/spring-projects/spring-kafka/commit/813b9af333a6b812617e970f34ca0ae447dda7fb
-
-To see the fix in action using Spring Boot 4.1.0-SNAPSHOT & Spring Kafka 4.1.0-SNAPSHOT: check out branch: `fix`
 
