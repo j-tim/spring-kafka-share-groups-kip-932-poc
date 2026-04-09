@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.kafka.config.ShareKafkaListenerContainerFactory;
 import org.springframework.kafka.core.DefaultShareConsumerFactory;
 import org.springframework.kafka.core.ShareConsumerFactory;
+import org.springframework.kafka.listener.ContainerProperties;
+import org.springframework.kafka.listener.ContainerProperties.ShareAckMode;
 
 @Configuration
 @Profile("explicit")
@@ -36,7 +38,9 @@ public class ExplicitShareGroupConsumerConfig {
 
     // Configure acknowledgment mode at container factory level
     // true means explicit acknowledgment is required
+    // Deprecated in favor of setShareAckMode(ShareAckMode.EXPLICIT)
     factory.getContainerProperties().setExplicitShareAcknowledgment(true);
+//    factory.getContainerProperties().setShareAckMode(ShareAckMode.EXPLICIT);
 
     return factory;
   }
