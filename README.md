@@ -232,3 +232,13 @@ Relevant part: `"deliveryState": 2`
 * Observability (Metrics + Tracing)
 * Exponential back-off
 * No DLT support
+
+## Fixes 
+
+The fix for the above issues have been provided in: 
+
+* Pull request: [4374](https://github.com/spring-projects/spring-kafka/pull/4374)
+* See commit: https://github.com/spring-projects/spring-kafka/commit/813b9af333a6b812617e970f34ca0ae447dda7fb
+
+To see the fix in action using Spring Boot 4.1.0-SNAPSHOT & Spring Kafka 4.1.0-SNAPSHOT: check out branch: `fix`
+
