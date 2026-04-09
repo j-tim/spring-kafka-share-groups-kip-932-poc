@@ -9,7 +9,8 @@ The fix for the issues have been provided in:
 * See commit: https://github.com/spring-projects/spring-kafka/commit/813b9af333a6b812617e970f34ca0ae447dda7fb
 
 To see the fix in action using Spring Boot 4.1.0-SNAPSHOT & Spring Kafka 4.1.0-SNAPSHOT: check out branch: [fix](https://github.com/j-tim/spring-kafka-share-groups-kip-932-poc/tree/fix)
-See documentation [What’s New in 4.1 Since 4.0 - Share Consumer Acknowledgment Modes](https://docs.spring.io/spring-kafka/reference/4.1-SNAPSHOT/whats-new.html#x41-share-ack-mode)
+
+See also Spring Kafka documentation: [What’s New in 4.1 Since 4.0 - Share Consumer Acknowledgment Modes](https://docs.spring.io/spring-kafka/reference/4.1-SNAPSHOT/whats-new.html#x41-share-ack-mode)
 
 ## Versions 
 
