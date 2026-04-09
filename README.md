@@ -220,16 +220,15 @@ docker exec -it kafka \
   }
 }
 ```
-
 Relevant part: `"deliveryState": 2`
 
 * deliveryState 0 = `Available`
 * deliveryState 2 = `Acked`
 * deliveryState 4 = `Archived`
 
-## Limitations
+## Current Limitations
 
 * Autoconfiguration
 * Observability (Metrics + Tracing)
 * Exponential back-off
-* DLT?
+* No DLT support
